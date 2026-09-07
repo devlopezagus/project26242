@@ -1,0 +1,180 @@
+/* ================================
+   VARIABLES
+================================ */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+:root {
+    /* Colores principales */
+    --color-primary: #ed8eaa;
+    --color-primary-light: #f6becd;
+    --color-primary-soft: #fff7f9;
+    --color-primary-dark: #d96f90;
+
+    --color-white: #ffffff;
+    --color-black: #222222;
+
+    --color-text: #454545;
+    --color-text-light: #777777;
+
+    --color-border: #f1d5dd;
+
+    /* Fondos */
+    --bg-main: #fff8fa;
+    --bg-secondary: #ffffff;
+
+    /* Tipografía */
+    --font-primary: "Georgia", serif;
+    --font-secondary: Arial, Helvetica, sans-serif;
+    --font-brand: "Kaushan Script", cursive;
+
+    /* Tamaños */
+    --container-width: 1200px;
+
+    /* Espaciados */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Bordes */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    /* Sombras */
+    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.10);
+
+    /* Transiciones */
+    --transition: 0.3s ease;
+}
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: var(--font-primary);
+    color: var(--color-text);
+
+    background-color: var(--bg-main);
+}
+
+
+#root {
+    min-height: 100vh;
+}
+
+
+/* ================================
+   ELEMENTOS GLOBALES
+================================ */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+/* ================================
+   CONTENEDOR GENERAL
+================================ */
+
+.container {
+    width: min(90%, var(--container-width));
+    margin-inline: auto;
+}
+
+
+/* ================================
+   TITULOS
+================================ */
+
+.section-title {
+    text-align: center;
+    color: var(--color-primary);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+.section-subtitle {
+    margin-top: var(--spacing-xs);
+
+    text-align: center;
+    font-style: italic;
+    color: var(--color-text-light);
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.8rem 1.5rem;
+
+    border-radius: var(--radius-lg);
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}

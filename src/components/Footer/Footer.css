@@ -1,0 +1,268 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+
+    background-color: var(--color-white);
+
+    color: var(--color-text);
+}
+
+
+/* =========================================
+   MOBILE FIRST
+   0px - 767px
+========================================= */
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+
+    padding-block: 2rem;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   MARCA
+========================================= */
+
+.footer-brand h2 {
+    margin-bottom: var(--spacing-sm);
+
+    color: var(--color-primary);
+
+    font-family: var(--font-brand);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+.footer-brand p {
+    max-width: 400px;
+
+    margin-inline: auto;
+
+    line-height: 1.7;
+
+    color: var(--color-text-light);
+}
+
+
+/* =========================================
+   TITULOS DEL FOOTER
+========================================= */
+
+.footer-title {
+    position: relative;
+
+    margin-bottom: var(--spacing-md);
+
+    font-size: 1.2rem;
+}
+
+
+.footer-title::after {
+    content: "";
+
+    display: block;
+
+    width: 40px;
+    height: 2px;
+
+    margin: 0.4rem auto 0;
+
+    background-color: var(--color-primary);
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+
+.footer-contact p {
+    color: var(--color-text);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   REDES SOCIALES
+========================================= */
+
+.footer-social {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+
+.footer-social a {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-primary-light);
+
+    color: var(--color-white);
+
+    border-radius: 50%;
+
+    transition:
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+
+.footer-social a:hover {
+    background-color: var(--color-primary);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.footer-bottom {
+    padding: 1rem;
+
+    text-align: center;
+
+    color: var(--color-white);
+
+    background: linear-gradient(90deg,
+            var(--color-primary-light),
+            var(--color-primary));
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   TABLET
+   768px en adelante
+========================================= */
+
+@media (min-width: 768px) {
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 2.5rem;
+
+        padding-block: 2.5rem;
+
+        text-align: left;
+    }
+
+
+    .footer-brand p {
+        margin-inline: 0;
+    }
+
+
+    .footer-title::after {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP
+   1024px en adelante
+========================================= */
+
+@media (min-width: 1024px) {
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+
+        gap: var(--spacing-xl);
+
+        padding-block: 3rem;
+    }
+
+
+    .footer-brand h2 {
+        font-size: 2.2rem;
+    }
+
+
+    .footer-title {
+        font-size: 1.25rem;
+    }
+
+}
+
+
+/* =========================================
+   UHD
+   1600px en adelante
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .footer-grid {
+        gap: 5rem;
+
+        padding-block: 3.5rem;
+    }
+
+
+    .footer-brand h2 {
+        font-size: 2.4rem;
+    }
+
+
+    .footer-brand p,
+    .footer-contact p {
+        font-size: 1.05rem;
+    }
+
+
+    .footer-title {
+        font-size: 1.35rem;
+    }
+
+
+    .footer-social a {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .footer-bottom {
+        font-size: 1rem;
+    }
+
+}
