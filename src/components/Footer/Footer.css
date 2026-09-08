@@ -6,7 +6,6 @@
     width: 100%;
 
     background-color: var(--color-white);
-
     color: var(--color-text);
 }
 
@@ -18,7 +17,6 @@
 
 .footer-grid {
     display: grid;
-
     grid-template-columns: 1fr;
 
     gap: 2rem;
@@ -49,14 +47,14 @@
 
     margin-inline: auto;
 
-    line-height: 1.7;
-
     color: var(--color-text-light);
+
+    line-height: 1.7;
 }
 
 
 /* =========================================
-   TITULOS DEL FOOTER
+   TÍTULOS
 ========================================= */
 
 .footer-title {
@@ -64,9 +62,13 @@
 
     margin-bottom: var(--spacing-md);
 
+    color: var(--color-text);
+
     font-size: 1.2rem;
 }
 
+
+/* Línea rosa debajo del título */
 
 .footer-title::after {
     content: "";
@@ -95,9 +97,31 @@
 
 
 .footer-contact p {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    margin: 0;
+
     color: var(--color-text);
 
     line-height: 1.5;
+}
+
+
+/* Iconos Font Awesome de contacto */
+
+.footer-contact p svg {
+    width: 18px;
+
+    color: var(--color-primary);
+
+    font-size: 1rem;
+
+    flex-shrink: 0;
 }
 
 
@@ -120,6 +144,7 @@
     height: 45px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -131,12 +156,24 @@
 
     transition:
         background-color var(--transition),
+        color var(--transition),
         transform var(--transition);
 }
 
 
+/* Iconos Font Awesome */
+
+.footer-social a svg {
+    font-size: 1.2rem;
+}
+
+
+/* Hover */
+
 .footer-social a:hover {
     background-color: var(--color-primary);
+
+    color: var(--color-white);
 
     transform: translateY(-3px);
 }
@@ -190,6 +227,11 @@
     }
 
 
+    .footer-contact p {
+        justify-content: flex-start;
+    }
+
+
     .footer-social {
         justify-content: flex-start;
     }
@@ -219,6 +261,17 @@
 
 
     .footer-title {
+        font-size: 1.25rem;
+    }
+
+
+    .footer-social a {
+        width: 46px;
+        height: 46px;
+    }
+
+
+    .footer-social a svg {
         font-size: 1.25rem;
     }
 
@@ -258,6 +311,11 @@
     .footer-social a {
         width: 48px;
         height: 48px;
+    }
+
+
+    .footer-social a svg {
+        font-size: 1.3rem;
     }
 
 

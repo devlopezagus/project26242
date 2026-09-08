@@ -1,0 +1,74 @@
+/* =========================================
+   PRODUCTOS - SECCIÓN
+========================================= */
+
+.products-section {
+    width: 100%;
+
+    padding-block: 3rem;
+
+    background-color: var(--bg-main);
+}
+
+
+.products-header {
+    margin-bottom: 2rem;
+}
+
+
+.products-status {
+    padding-block: 3rem;
+
+    text-align: center;
+
+    color: var(--color-text-light);
+}
+
+
+.products-error {
+    color: var(--color-primary-dark);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 768px) {
+
+    .products-section {
+        padding-block: 4rem;
+    }
+
+
+    .products-header {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1024px) {
+
+    .products-section {
+        padding-block: 5rem;
+    }
+
+}
+
+
+/* =========================================
+   UHD
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .products-section {
+        padding-block: 6rem;
+    }
+
+}
