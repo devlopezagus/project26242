@@ -1,0 +1,192 @@
+/* =========================================
+   NAV - MOBILE FIRST
+========================================= */
+
+.nav {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* Menú abierto */
+
+.nav.nav-open {
+    max-height: 300px;
+
+    opacity: 1;
+}
+
+
+.nav-list {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    padding-top: 0.8rem;
+
+    text-align: center;
+}
+
+
+.nav-list li {
+    width: 100%;
+}
+
+
+.nav-link {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    padding: 0.9rem 0.5rem;
+
+    color: var(--color-text);
+
+    font-size: 0.95rem;
+
+    border-top: 1px solid var(--color-border);
+
+    transition:
+        color var(--transition),
+        background-color var(--transition);
+}
+
+
+.nav-link:hover {
+    color: var(--color-primary);
+
+    background-color: var(--color-primary-soft);
+}
+
+
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (min-width: 768px) {
+
+    .nav {
+        order: 2;
+
+        width: auto;
+
+        max-height: none;
+
+        overflow: visible;
+
+        opacity: 1;
+
+        margin-left: auto;
+    }
+
+
+    .nav-list {
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 1.5rem;
+
+        padding-top: 0;
+    }
+
+
+    .nav-list li {
+        width: auto;
+    }
+
+
+    .nav-link {
+        display: inline-block;
+
+        width: auto;
+
+        padding: 0.5rem 0;
+
+        border-top: none;
+
+        font-size: 1rem;
+    }
+
+
+    .nav-link:hover {
+        background-color: transparent;
+    }
+
+
+    .nav-link::after {
+        content: "";
+
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 0;
+        height: 2px;
+
+        background-color: var(--color-primary);
+
+        transition: width var(--transition);
+    }
+
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 1024px) {
+
+    .nav-list {
+        gap: 2rem;
+    }
+
+}
+
+
+/* =========================================
+   UHD
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .nav-list {
+        gap: 2.5rem;
+    }
+
+
+    .nav-link {
+        font-size: 1.05rem;
+    }
+
+}

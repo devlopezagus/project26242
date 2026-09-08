@@ -1,5 +1,6 @@
 import { Header } from "./components/Header/Header"
 import { Footer } from "./components/Footer/Footer"
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer"
 import './App.css'
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
       <Header />
 
       <main className="main">
-        solo texto de prueba
+        <ItemListContainer />
       </main>
 
       <Footer />

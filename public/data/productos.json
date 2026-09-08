@@ -1,0 +1,200 @@
+[
+    {
+        "id": 1,
+        "title": "Esmalte Semipermanente Rosa Nude",
+        "descripcion": "Esmalte semipermanente de alta pigmentación y larga duración. Ideal para manicura profesional.",
+        "categoria": "manicuria",
+        "precio": 8500,
+        "cantidad": 15,
+        "marca": "Beauty Pro",
+        "imagen": "https://picsum.photos/seed/esmalte-nude/500/500",
+        "destacado": true
+    },
+    {
+        "id": 2,
+        "title": "Base Rubber Fortalecedora",
+        "descripcion": "Base flexible autonivelante para reforzar uñas naturales y mejorar la adherencia del esmaltado.",
+        "categoria": "manicuria",
+        "precio": 10500,
+        "cantidad": 10,
+        "marca": "Nail Studio",
+        "imagen": "https://picsum.photos/seed/rubber-base/500/500",
+        "destacado": true
+    },
+    {
+        "id": 3,
+        "title": "Aceite Hidratante para Cutículas",
+        "descripcion": "Aceite nutritivo para hidratar y suavizar cutículas y contorno de las uñas.",
+        "categoria": "manicuria",
+        "precio": 4900,
+        "cantidad": 22,
+        "marca": "Beauty Lady",
+        "imagen": "https://picsum.photos/seed/cuticulas/500/500",
+        "destacado": false
+    },
+    {
+        "id": 4,
+        "title": "Crema Hidratante para Pies",
+        "descripcion": "Crema de hidratación intensiva especialmente formulada para pies secos y talones.",
+        "categoria": "pedicuria",
+        "precio": 7200,
+        "cantidad": 18,
+        "marca": "Soft Feet",
+        "imagen": "https://picsum.photos/seed/crema-pies/500/500",
+        "destacado": true
+    },
+    {
+        "id": 5,
+        "title": "Exfoliante para Pies",
+        "descripcion": "Exfoliante corporal para ayudar a eliminar células muertas y dejar la piel suave.",
+        "categoria": "pedicuria",
+        "precio": 6800,
+        "cantidad": 12,
+        "marca": "Soft Feet",
+        "imagen": "https://picsum.photos/seed/exfoliante-pies/500/500",
+        "destacado": false
+    },
+    {
+        "id": 6,
+        "title": "Kit de Separadores para Pedicura",
+        "descripcion": "Set de separadores suaves y reutilizables para facilitar el esmaltado de las uñas de los pies.",
+        "categoria": "pedicuria",
+        "precio": 3500,
+        "cantidad": 30,
+        "marca": "Beauty Tools",
+        "imagen": "https://picsum.photos/seed/pedicura-kit/500/500",
+        "destacado": false
+    },
+    {
+        "id": 7,
+        "title": "Cera Depilatoria Profesional",
+        "descripcion": "Cera depilatoria de textura cremosa indicada para tratamientos de depilación corporal.",
+        "categoria": "depilacion",
+        "precio": 9200,
+        "cantidad": 14,
+        "marca": "Smooth Skin",
+        "imagen": "https://picsum.photos/seed/cera-depilatoria/500/500",
+        "destacado": true
+    },
+    {
+        "id": 8,
+        "title": "Bandas Depilatorias",
+        "descripcion": "Bandas resistentes para depilación con cera. Paquete de 100 unidades.",
+        "categoria": "depilacion",
+        "precio": 5400,
+        "cantidad": 25,
+        "marca": "Smooth Skin",
+        "imagen": "https://picsum.photos/seed/bandas-depilatorias/500/500",
+        "destacado": false
+    },
+    {
+        "id": 9,
+        "title": "Aceite Post Depilatorio",
+        "descripcion": "Aceite corporal diseñado para retirar restos de cera y aportar suavidad después de la depilación.",
+        "categoria": "depilacion",
+        "precio": 6500,
+        "cantidad": 9,
+        "marca": "Smooth Skin",
+        "imagen": "https://picsum.photos/seed/post-depilacion/500/500",
+        "destacado": false
+    },
+    {
+        "id": 10,
+        "title": "Paleta de Sombras Profesional",
+        "descripcion": "Paleta de sombras con variedad de tonos neutros y vibrantes para maquillaje social y artístico.",
+        "categoria": "maquillaje",
+        "precio": 28500,
+        "cantidad": 7,
+        "marca": "Beauty Colors",
+        "imagen": "https://picsum.photos/seed/paleta-maquillaje/500/500",
+        "destacado": true
+    },
+    {
+        "id": 11,
+        "title": "Set de Brochas de Maquillaje",
+        "descripcion": "Set de brochas para rostro y ojos con fibras suaves y diferentes formatos.",
+        "categoria": "maquillaje",
+        "precio": 19800,
+        "cantidad": 11,
+        "marca": "Beauty Colors",
+        "imagen": "https://picsum.photos/seed/brochas-maquillaje/500/500",
+        "destacado": true
+    },
+    {
+        "id": 12,
+        "title": "Esponja de Maquillaje",
+        "descripcion": "Esponja suave para aplicar base, corrector y productos líquidos o en crema.",
+        "categoria": "maquillaje",
+        "precio": 4200,
+        "cantidad": 35,
+        "marca": "Beauty Colors",
+        "imagen": "https://picsum.photos/seed/esponja-maquillaje/500/500",
+        "destacado": false
+    },
+    {
+        "id": 13,
+        "title": "Protector Térmico Capilar",
+        "descripcion": "Spray protector para utilizar antes del secador, planchita o buclera.",
+        "categoria": "peinado",
+        "precio": 8900,
+        "cantidad": 16,
+        "marca": "Hair Studio",
+        "imagen": "https://picsum.photos/seed/protector-termico/500/500",
+        "destacado": true
+    },
+    {
+        "id": 14,
+        "title": "Serum Reparador Capilar",
+        "descripcion": "Serum ligero para aportar brillo, suavidad y mejorar la apariencia de las puntas.",
+        "categoria": "peinado",
+        "precio": 11500,
+        "cantidad": 8,
+        "marca": "Hair Studio",
+        "imagen": "https://picsum.photos/seed/serum-capilar/500/500",
+        "destacado": false
+    },
+    {
+        "id": 15,
+        "title": "Cepillo Profesional para Peinado",
+        "descripcion": "Cepillo redondo para brushing con mango ergonómico y cerdas resistentes al calor.",
+        "categoria": "peinado",
+        "precio": 13200,
+        "cantidad": 6,
+        "marca": "Hair Tools",
+        "imagen": "https://picsum.photos/seed/cepillo-peinado/500/500",
+        "destacado": false
+    },
+    {
+        "id": 16,
+        "title": "Agua Micelar Facial",
+        "descripcion": "Solución de limpieza facial para retirar maquillaje e impurezas de forma suave.",
+        "categoria": "facial",
+        "precio": 7800,
+        "cantidad": 20,
+        "marca": "Skin Beauty",
+        "imagen": "https://picsum.photos/seed/agua-micelar/500/500",
+        "destacado": false
+    },
+    {
+        "id": 17,
+        "title": "Mascarilla Facial Hidratante",
+        "descripcion": "Mascarilla facial hidratante para complementar rutinas de cuidado de la piel.",
+        "categoria": "facial",
+        "precio": 5900,
+        "cantidad": 28,
+        "marca": "Skin Beauty",
+        "imagen": "https://picsum.photos/seed/mascarilla-facial/500/500",
+        "destacado": true
+    },
+    {
+        "id": 18,
+        "title": "Gel Limpiador Facial",
+        "descripcion": "Gel de limpieza diaria para retirar suciedad, maquillaje y exceso de oleosidad.",
+        "categoria": "facial",
+        "precio": 8100,
+        "cantidad": 0,
+        "marca": "Skin Beauty",
+        "imagen": "https://picsum.photos/seed/gel-facial/500/500",
+        "destacado": false
+    }
+]

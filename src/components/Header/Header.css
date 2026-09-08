@@ -4,49 +4,63 @@
 
 .header {
     width: 100%;
+
     background-color: var(--color-white);
+
     border-bottom: 2px solid var(--color-border);
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
 }
 
 
 /* =========================================
-   MOBILE FIRST - 0px -> 767px
+   MOBILE FIRST
 ========================================= */
 
 .header-container {
     min-height: 70px;
+
     display: grid;
+
     grid-template-columns: 1fr auto;
+
     align-items: center;
+
     gap: 1rem;
+
     padding-block: 0.8rem;
 }
 
 
 /* =========================================
-   MARCA (BEAUTY LADY)
+   MARCA
 ========================================= */
 
 .brand {
     color: var(--color-primary);
+
     font-family: var(--font-brand);
+
     font-size: 1.8rem;
     font-weight: 400;
+
     white-space: nowrap;
 }
 
 
 /* =========================================
-   ACCIONES (usuario + carrito + hamburguesa)
+   ACCIONES
 ========================================= */
 
 .header-actions {
     display: flex;
+
     align-items: center;
     justify-content: flex-end;
+
     gap: 0.4rem;
 }
 
@@ -55,16 +69,26 @@
 .menu-button {
     width: 38px;
     height: 38px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     padding: 0;
+
     background-color: transparent;
+
     color: var(--color-text);
+
     border: none;
+
     border-radius: 50%;
+
     font-size: 1.1rem;
+
     cursor: pointer;
+
     transition:
         background-color var(--transition),
         color var(--transition),
@@ -75,82 +99,15 @@
 .header-icon:hover,
 .menu-button:hover {
     background-color: var(--color-primary-soft);
+
     color: var(--color-primary);
+
     transform: translateY(-2px);
 }
 
 
 /* =========================================
-   NAVEGACIÓN MOBILE
-========================================= */
-
-.nav {
-    grid-column: 1 / -1;
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition:
-        max-height 0.3s ease,
-        opacity 0.3s ease;
-}
-
-
-/* Menú abierto */
-
-.nav.nav-open {
-    max-height: 300px;
-    opacity: 1;
-}
-
-
-.nav-list {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: stretch;
-    gap: 0;
-    padding-top: 0.8rem;
-}
-
-
-.nav-list li {
-    width: 100%;
-}
-
-
-.nav-link {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 0.9rem 0.5rem;
-    color: var(--color-text);
-    font-size: 0.95rem;
-    border-top: 1px solid var(--color-border);
-    transition:
-        color var(--transition),
-        background-color var(--transition);
-}
-
-
-.nav-link:hover {
-    color: var(--color-primary);
-    background-color: var(--color-primary-soft);
-}
-
-
-/* =========================================
-   LINK ACTIVO
-========================================= */
-
-.nav-link.active {
-    color: var(--color-primary);
-}
-
-
-/* =========================================
    TABLET
-   768px en adelante
 ========================================= */
 
 @media (min-width: 768px) {
@@ -186,78 +143,6 @@
     }
 
 
-    .nav {
-        order: 2;
-
-        width: auto;
-
-        max-height: none;
-
-        overflow: visible;
-
-        opacity: 1;
-
-        margin-left: auto;
-    }
-
-
-    .nav-list {
-        flex-direction: row;
-
-        align-items: center;
-
-        gap: 1.5rem;
-
-        padding-top: 0;
-    }
-
-
-    .nav-list li {
-        width: auto;
-    }
-
-
-    .nav-link {
-        display: inline-block;
-
-        width: auto;
-
-        padding: 0.5rem 0;
-
-        border-top: none;
-
-        font-size: 1rem;
-    }
-
-
-    .nav-link:hover {
-        background-color: transparent;
-    }
-
-
-    .nav-link::after {
-        content: "";
-
-        position: absolute;
-
-        left: 0;
-        bottom: 0;
-
-        width: 0;
-        height: 2px;
-
-        background-color: var(--color-primary);
-
-        transition: width var(--transition);
-    }
-
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        width: 100%;
-    }
-
-
     .header-icon {
         width: 40px;
         height: 40px;
@@ -268,7 +153,6 @@
 
 /* =========================================
    DESKTOP
-   1024px en adelante
 ========================================= */
 
 @media (min-width: 1024px) {
@@ -283,11 +167,6 @@
     }
 
 
-    .nav-list {
-        gap: 2rem;
-    }
-
-
     .header-icon {
         width: 42px;
         height: 42px;
@@ -297,7 +176,7 @@
 
 
 /* =========================================
-   UHD 1600px en adelante
+   UHD
 ========================================= */
 
 @media (min-width: 1600px) {
@@ -309,16 +188,6 @@
 
     .brand {
         font-size: 2.5rem;
-    }
-
-
-    .nav-list {
-        gap: 2.5rem;
-    }
-
-
-    .nav-link {
-        font-size: 1.05rem;
     }
 
 
