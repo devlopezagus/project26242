@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
+import { ProductStatus } from "../UI/ProductStatus/ProductStatus";
 import "./ItemListContainer.css";
 
 export const ItemListContainer = () => {
@@ -8,46 +9,67 @@ export const ItemListContainer = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/data/productos.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("No se pudieron cargar los productos");
-        }
+    // setLoading(true);  // para proximos filtros
+    // setError(null); // para proximos filtros
 
-        return res.json();
-      })
-      .then((data) => {
-        setProducts(data);
-      })
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    // prueba mensajes de error y loading
+    // quitar setTimeout para ver el fetch sin delay
+    setTimeout(() => {
+      fetch("/data/productos.json")
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("No se pudieron cargar los productos");
+          }
+
+          return res.json();
+        })
+        .then((data) => {
+          setProducts(data);
+        })
+        .catch((err) => {
+          setError(err);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }, 3000);
+
+    /*  
+      fetch("/data/productos.json")
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error("No se pudieron cargar los productos");
+          }
+  
+          return res.json();
+        })
+        .then((data) => {
+          setProducts(data);
+        })
+        .catch((err) => {
+          setError(err);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+
+    */
   }, []);
+
+
 
   if (loading) {
     return (
-      <section className="products-section">
-        <div className="container">
-          <p className="products-status">
-            Cargando productos...
-          </p>
-        </div>
-      </section>
+      <ProductStatus message="Cargando productos..." />
     );
   }
 
   if (error) {
     return (
-      <section className="products-section">
-        <div className="container">
-          <p className="products-status products-error">
-            Error al cargar los productos.
-          </p>
-        </div>
-      </section>
+      <ProductStatus
+        message="Error al cargar los productos."
+        isError
+      />
     );
   }
 
