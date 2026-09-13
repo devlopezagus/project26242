@@ -18,21 +18,15 @@ export const ItemListContainer = () => {
       fetch("/data/productos.json")
         .then((res) => {
           if (!res.ok) {
-            throw new Error("No se pudieron cargar los productos");
+            throw new Error("Error al cargar los productos.");
           }
 
           return res.json();
         })
-        .then((data) => {
-          setProducts(data);
-        })
-        .catch((err) => {
-          setError(err);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    }, 3000);
+        .then((data) => setProducts(data))
+        .catch((err) => setError(err))
+        .finally(() => setLoading(false));
+    }, 2000);
 
     /*  
       fetch("/data/productos.json")
