@@ -1,6 +1,6 @@
 # 💅 BeautyLady
 
-> Proyecto desarrollado con **React** como parte de mi formación en desarrollo Front-End.
+> Proyecto desarrollado con **React** como parte de mi formación en **Talento Tech**.
 
 BeautyLady es una tienda web inspirada en un emprendimiento de belleza, creada para poner en práctica los principales conceptos aprendidos durante el curso de **React**.
 
@@ -121,12 +121,12 @@ Este proyecto tiene como objetivo aplicar de manera práctica los conocimientos 
 * Componentización en React.
 * Props y estados.
 * Componentes reutilizables.
-* Eventos y manejo de formularios.
+<!-- * Eventos y manejo de formularios. -->
 * Renderizado dinámico.
 * Consumo de datos.
 * React Router.
 * Navegación entre vistas.
-* Manejo de carrito.
+<!-- * Manejo de carrito. -->
 * Diseño responsive.
 * Organización y reutilización de estilos.
 * Uso de librerías externas.
