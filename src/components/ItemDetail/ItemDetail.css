@@ -1,0 +1,188 @@
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin-inline: auto;
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   IMAGEN
+   ========================= */
+
+.product-detail-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color-background);
+}
+
+.product-detail-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+
+.product-detail-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.product-detail-title {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.product-detail-description {
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.product-detail-info {
+    margin-bottom: var(--spacing-lg);
+}
+
+.product-detail-price {
+    margin-bottom: 0.35rem;
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.product-detail-quantity {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.product-detail-unavailable {
+    color: var(--color-error);
+    font-weight: 600;
+}
+
+/* =========================
+   BOTÓN
+   ========================= */
+
+.product-detail-button {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color var(--transition),
+        transform var(--transition);
+}
+
+.product-detail-button:hover:not(:disabled) {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+.product-detail-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (min-width: 768px) {
+
+    .product-detail {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        padding: 2rem;
+    }
+
+    .product-detail-title {
+        font-size: 2rem;
+    }
+
+    .product-detail-button {
+        width: fit-content;
+        min-width: 220px;
+    }
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 1024px) {
+
+    .product-detail {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 4rem;
+        padding: 2.5rem;
+    }
+
+    .product-detail-title {
+        font-size: 2.4rem;
+    }
+
+    .product-detail-description {
+        font-size: 1.05rem;
+    }
+
+    .product-detail-price {
+        font-size: 2rem;
+    }
+}
+
+/* =========================
+   UHD
+   ========================= */
+
+@media (min-width: 1600px) {
+
+    .product-detail {
+        max-width: 1300px;
+        gap: 5rem;
+        padding: 3rem;
+    }
+
+    .product-detail-title {
+        font-size: 2.8rem;
+    }
+
+    .product-detail-description {
+        font-size: 1.1rem;
+    }
+
+    .product-detail-price {
+        font-size: 2.2rem;
+    }
+
+    .product-detail-button {
+        min-width: 240px;
+        padding: 1rem 1.8rem;
+        font-size: 1.05rem;
+    }
+}

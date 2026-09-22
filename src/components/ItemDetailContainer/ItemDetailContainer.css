@@ -1,0 +1,38 @@
+.product-detail-section {
+    width: 100%;
+    padding-block: 2rem;
+}
+
+.product-detail-section .container {
+    width: 100%;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (min-width: 768px) {
+    .product-detail-section {
+        padding-block: 3rem;
+    }
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 1024px) {
+    .product-detail-section {
+        padding-block: 4rem;
+    }
+}
+
+/* =========================
+   UHD
+   ========================= */
+
+@media (min-width: 1600px) {
+    .product-detail-section {
+        padding-block: 5rem;
+    }
+}

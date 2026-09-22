@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 export const Nav = ({ menuAbierto }) => {
@@ -7,27 +8,27 @@ export const Nav = ({ menuAbierto }) => {
             <ul className="nav-list">
 
                 <li>
-                    <a href="/" className="nav-link">
+                    <Link to="/" className="nav-link">
                         Inicio
-                    </a>
+                    </Link>
                 </li>
 
                 <li>
-                    <a href="/servicios" className="nav-link">
+                    <Link to="/services" className="nav-link">
                         Servicios
-                    </a>
+                    </Link>
                 </li>
 
                 <li>
-                    <a href="/galeria" className="nav-link">
+                    <Link to="/gallery" className="nav-link">
                         Galería
-                    </a>
+                    </Link>
                 </li>
 
                 <li>
-                    <a href="/contacto" className="nav-link">
+                    <Link to="/contact" className="nav-link">
                         Contacto
-                    </a>
+                    </Link>
                 </li>
 
             </ul>

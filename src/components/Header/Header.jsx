@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Nav } from "../Nav/Nav";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export const Header = () => {
@@ -14,9 +15,9 @@ export const Header = () => {
 
             <div className="container header-container">
 
-                <a href="/" className="brand">
+                <Link to="/" className="brand">
                     Beauty Lady
-                </a>
+                </Link>
 
                 <div className="header-actions">
 
@@ -27,12 +28,13 @@ export const Header = () => {
                         👤
                     </button>
 
-                    <button
+                    <Link
+                        to="/cart"
                         className="header-icon"
                         aria-label="Carrito"
                     >
                         🛒
-                    </button>
+                    </Link>
 
                     <button
                         className="menu-button"

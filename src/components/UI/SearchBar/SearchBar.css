@@ -1,0 +1,66 @@
+/* Barra de búsqueda alineada a la derecha */
+.searchBarra {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.searchBarra .form-label {
+    margin: 0;
+    font-weight: 500;
+    color: #495057;
+    white-space: nowrap;
+}
+
+/* Input estilizado tipo Bootstrap */
+.searchBarra .form-control {
+    width: 220px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+}
+
+/* Hover sutil */
+.searchBarra .form-control:hover {
+    border-color: #adb5bd;
+}
+
+/* Estado focus: borde azul + halo azul (el truco de Bootstrap) */
+.searchBarra .form-control:focus {
+    border-color: #86b7fe;
+    background-color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Placeholder suave */
+.searchBarra .form-control::placeholder {
+    color: #adb5bd;
+    opacity: 1;
+}
+
+/* Responsive: en pantallas chicas la barra baja */
+@media (max-width: 576px) {
+    .searchBarra {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchBarra .form-control {
+        width: 100%;
+    }
+}

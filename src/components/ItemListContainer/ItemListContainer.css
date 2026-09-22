@@ -37,7 +37,7 @@
 @media (min-width: 768px) {
 
     .products-section {
-        padding-block: 4rem;
+        padding-block: 3rem;
     }
 
 
@@ -68,7 +68,7 @@
 @media (min-width: 1600px) {
 
     .products-section {
-        padding-block: 6rem;
+        padding-block: 3rem;
     }
 
 }
