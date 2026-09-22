@@ -1,6 +1,6 @@
 import "./SearchBar.css";
 
-export const SearchBar = ({ searchTerm, onSearchChange }) => {
+export const SearchBar = ({ searchArticle, onSearchChange }) => {
 
     return (
         <div className="searchBarra">
@@ -16,7 +16,7 @@ export const SearchBar = ({ searchTerm, onSearchChange }) => {
                 className="form-control"
                 id="productoBuscar"
                 placeholder="Nombre del producto..."
-                value={searchTerm}
+                value={searchArticle}
                 onChange={(e) => onSearchChange(e.target.value)}
             />
         </div>

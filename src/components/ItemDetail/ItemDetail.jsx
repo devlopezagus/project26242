@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import "./ItemDetail.css";
 
 export const ItemDetail = ({ item }) => {
@@ -13,6 +14,14 @@ export const ItemDetail = ({ item }) => {
     } = item;
 
     const sinStock = cantidad === 0;
+
+    const agregarCarritoProvisorio = () => {
+        Swal.fire({
+            icon: "success",
+            title: "Producto agregado",
+            text: "El producto se ha agregado al carrito",
+        });
+    };
 
     return (
         <article className="product-detail">
@@ -76,6 +85,7 @@ export const ItemDetail = ({ item }) => {
                 <button
                     className="product-detail-button"
                     disabled={sinStock}
+                    onClick={agregarCarritoProvisorio}
                 >
                     {sinStock ? "Sin stock" : "Agregar al carrito"}
                 </button>
