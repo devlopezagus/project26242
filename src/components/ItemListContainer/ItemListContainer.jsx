@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { ProductStatus } from "../UI/ProductStatus/ProductStatus";
+import { SearchBar } from "../UI/SearchBar/SearchBar";
 import "./ItemListContainer.css";
 
 export const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchArticle, setSearchArticle] = useState("");
 
   useEffect(() => {
     // setLoading(true);  // para proximos filtros
@@ -50,7 +52,11 @@ export const ItemListContainer = () => {
     */
   }, []);
 
-
+  const productosFiltrados = products.filter((product) =>
+    product.title
+      .toLowerCase()
+      .includes(searchArticle.trim().toLowerCase())
+  );
 
   if (loading) {
     return (
@@ -71,7 +77,10 @@ export const ItemListContainer = () => {
     <section className="products-section">
 
       <div className="container">
-
+        <SearchBar
+          searchArticle={searchArticle}
+          onSearchChange={setSearchArticle}
+        />
         <div className="products-header">
 
           <h2 className="section-title">
@@ -84,7 +93,12 @@ export const ItemListContainer = () => {
 
         </div>
 
-        <ItemList products={products} />
+        {/* <SearchBar
+          searchArticle={searchArticle}
+          onSearchChange={setSearchArticle}
+        /> */}
+
+        <ItemList products={productosFiltrados} />
 
       </div>
 
