@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { ProductStatus } from "../UI/ProductStatus/ProductStatus";
 import "./ItemDetailContainer.css";
 
 export const ItemDetailContainer = () => {
@@ -17,11 +18,21 @@ export const ItemDetailContainer = () => {
         setLoading(true);
         setItemDetail(null);
 
-        fetch("/data/products.json")
+        fetch("/data/productos.json")
             .then((res) => {
+
+                // SOLO PARA PROBAR EL ERROR DE MESSAGE, BORRAR DESPUES
+                // if (true) {
+                //     throw new Error("No se pudo cargar el producto");
+                // }
+
                 if (!res.ok) {
                     throw new Error("No se pudo cargar el producto");
                 }
+
+                // console.log(id);
+                // console.log(res);
+
 
                 return res.json();
             })
@@ -49,27 +60,11 @@ export const ItemDetailContainer = () => {
     }, [id]);
 
     if (loading) {
-        return (
-            <section className="product-detail-section">
-                <div className="container">
-                    <p className="products-status">
-                        Cargando producto...
-                    </p>
-                </div>
-            </section>
-        );
+        return <ProductStatus message="Cargando producto..." />;
     }
 
     if (error) {
-        return (
-            <section className="product-detail-section">
-                <div className="container">
-                    <p className="products-status products-error">
-                        {error.message}
-                    </p>
-                </div>
-            </section>
-        );
+        return <ProductStatus message={error} isError />;
     }
 
     return (

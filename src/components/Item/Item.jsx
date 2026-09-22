@@ -81,12 +81,12 @@ export const Item = ({
                     </div>
 
 
-                    <button
+                    {/* <button
                         className="product-button"
                         disabled={sinStock}
                     >
                         Ver detalle
-                    </button>
+                    </button> */}
 
                 </div>
 
