@@ -16,40 +16,39 @@ export const ItemListContainer = () => {
 
     // prueba mensajes de error y loading
     // quitar setTimeout para ver el fetch sin delay
-    setTimeout(() => {
-      fetch("/data/productos.json")
-        .then((res) => {
-          if (!res.ok) {
-            throw new Error("Error al cargar los productos.");
-          }
+    // setTimeout(() => {
+    //   fetch("/data/productos.json")
+    //     .then((res) => {
+    //       if (!res.ok) {
+    //         throw new Error("Error al cargar los productos.");
+    //       }
 
-          return res.json();
-        })
-        .then((data) => setProducts(data))
-        .catch((err) => setError(err))
-        .finally(() => setLoading(false));
-    }, 2000);
+    //       return res.json();
+    //     })
+    //     .then((data) => setProducts(data))
+    //     .catch((err) => setError(err))
+    //     .finally(() => setLoading(false));
+    // }, 2000);
 
-    /*  
-      fetch("/data/productos.json")
-        .then((res) => {
-          if (!res.ok) {
-            throw new Error("No se pudieron cargar los productos");
-          }
-  
-          return res.json();
-        })
-        .then((data) => {
-          setProducts(data);
-        })
-        .catch((err) => {
-          setError(err);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
 
-    */
+    fetch("/data/productos.json")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("No se pudieron cargar los productos");
+        }
+
+        return res.json();
+      })
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+
   }, []);
 
   const productosFiltrados = products.filter((product) =>

@@ -5,6 +5,8 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { Error404 } from "./components/Error404/Error404"
 import { Routes, Route } from "react-router-dom";
 import './App.css'
+import { Servicios } from "./components/Servicios/Servicios"
+import { Contact } from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -16,9 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
-          <Route path="/services" element={<h2>Servicio</h2>} />
+          <Route path="/services" element={<Servicios />} />
           <Route path="/gallery" element={<h2>Galeria</h2>} />
-          <Route path="/contact" element={<h2>Contacto</h2>} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<h2>Iniciar Sesión</h2>} />
           <Route path="/register" element={<h2>Registrarse</h2>} />
           <Route path="/cart" element={<h2>Carrito</h2>} />
