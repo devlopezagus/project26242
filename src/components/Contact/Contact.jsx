@@ -1,18 +1,8 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import {
-    faWhatsapp,
-    faInstagram
-} from "@fortawesome/free-brands-svg-icons";
-
-import {
-    faEnvelope,
-    faLocationDot
-} from "@fortawesome/free-solid-svg-icons";
-
+import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { ContactForm } from "../UI/ContactForm/ContactForm";
-
 import "./Contact.css";
 
 export const Contact = () => {
