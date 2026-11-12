@@ -10,10 +10,11 @@ export const FormContainer = () => {
         const updateData = {
             ...formData, [name]: value
         }
+        setFormData(updateData);
     }
 
     const handleSubmit = (e) => {
-
+        e.preventDefault()
     }
 
 
